@@ -36,7 +36,7 @@ The list shows **First name**, **Last name**, **Username** and **Email**. Click 
 | Username | Yes | The name they sign in with. Using their email address is common. |
 | First name | Yes | |
 | Last name | Yes | |
-| Redirect to domain | No | Sends the user to a specific Studio domain after signing in, for example `Studio DEV (dev.digitalvi.app)`. Leave blank for the default. |
+| Redirect to domain | No | Sends the user to a specific Studio domain after signing in, for example `Studio (studio.digitalvi.app)`. Leave blank for the default. |
 | Deactivated | No | Tick to block sign-in without deleting the account. |
 
 ## User details page

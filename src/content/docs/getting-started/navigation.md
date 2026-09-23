@@ -7,7 +7,7 @@ sidebar:
 
 ## Signing in
 
-Open your Studio address (for example `https://dev.digitalvi.app`) and sign in with your **username or email**
+Go to [studio.digitalvi.app](https://studio.digitalvi.app) and sign in with your **username or email**
 and **password**.
 
 - **Remember me** keeps you signed in on this browser.

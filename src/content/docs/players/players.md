@@ -73,7 +73,7 @@ Fields marked *App players only* are hidden when the type is **Universal app** o
 ### Connect a Browser player
 
 After saving, open the player. Under **Details** you'll find **Browser link for player**
-(for example `https://dev.digitalvi.app/play/…`). Open that link full-screen on the display.
+(for example `https://studio.digitalvi.app/play/…`). Open that link full-screen on the display.
 
 **Concurrent sessions** shows how many browsers are using the link right now, out of the maximum you set.
 
