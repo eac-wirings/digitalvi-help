@@ -1,0 +1,52 @@
+---
+title: Linking to help from Studio
+description: How every Studio page maps to a help page URL, so the app can offer context-sensitive help links.
+sidebar:
+  label: In-app help links
+---
+
+import config from '../../../../vercel.json';
+
+Every page in this help site has its own permanent URL, and every section inside a page has its own anchor
+(the part after `#`). You can link straight to any heading, for example
+`https://help.digitalvi.app/players/player-details/#admin-menu`.
+
+## Context-sensitive help for Studio
+
+To link from any Studio screen to its help, add `/app` plus the Studio path to the help site address:
+
+```text
+Studio page:  https://dev.digitalvi.app/screenLayouts/299/builder
+Help link:    https://help.digitalvi.app/app/screenLayouts/299/builder
+Redirects to: https://help.digitalvi.app/players/layout-builder/
+```
+
+In the Studio page template, the help button can be a single line:
+
+```html
+<a href="https://help.digitalvi.app/app${location.pathname}" target="_blank" rel="noopener">Help</a>
+```
+
+IDs in the path (`299`, user IDs and so on) are ignored, and unknown paths go to the help home page. So the
+link never breaks, even as Studio gains new screens.
+
+## Route map
+
+The redirects are defined in `vercel.json` in the help site repository. This table is generated from that file.
+
+<table>
+	<thead>
+		<tr><th>Studio path</th><th>Help page</th></tr>
+	</thead>
+	<tbody>
+		{config.redirects.map((r) => (
+			<tr>
+				<td><code>{r.source.replace(/^\/app/, '') || '/'}</code></td>
+				<td><a href={r.destination}>{r.destination}</a></td>
+			</tr>
+		))}
+	</tbody>
+</table>
+
+`:id` matches a single path segment. `:path*` matches anything, including nothing. Rules are checked top to
+bottom, and the first match wins.

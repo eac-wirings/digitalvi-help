@@ -1,0 +1,46 @@
+---
+title: DigitalVI Studio Help
+description: Guides and reference for DigitalVI Studio, the platform for managing digital signage players, playlists, layouts and schedules.
+template: splash
+hero:
+  tagline: Everything you need to set up screens, publish content and keep your players running.
+  actions:
+    - text: Quick start
+      link: /getting-started/quick-start/
+      icon: right-arrow
+    - text: How Studio fits together
+      link: /getting-started/overview/
+      variant: minimal
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+<CardGrid>
+	<Card title="Players & locations" icon="laptop">
+		Register screens, organize them by location and check whether they are online.
+		<br />[Players](/players/players/) · [Locations](/players/locations/) · [Player details](/players/player-details/)
+	</Card>
+	<Card title="Playlists & media" icon="document">
+		Upload images, videos and web pages, arrange them in playlists and send them to screens.
+		<br />[Playlists](/playlists/playlists/) · [Media manager](/playlists/media-manager/) · [Data feeds](/content/data-feeds/)
+	</Card>
+	<Card title="Layouts & schedules" icon="puzzle">
+		Split screens into zones and decide what plays where and when.
+		<br />[Layouts](/players/layouts/) · [Layout builder](/players/layout-builder/) · [Scheduling](/reference/scheduling/)
+	</Card>
+	<Card title="Users & permissions" icon="setting">
+		Invite teammates and control what each person can see and change.
+		<br />[Users](/clients/users/) · [Permissions](/clients/user-permissions/) · [Roles](/clients/user-roles/)
+	</Card>
+</CardGrid>
+
+## Popular tasks
+
+<CardGrid>
+	<LinkCard title="Add a new player" href="/players/players/#add-a-new-player" />
+	<LinkCard title="Add content to a playlist" href="/playlists/playlists/#add-content-to-a-playlist" />
+	<LinkCard title="Schedule a playlist" href="/reference/scheduling/" />
+	<LinkCard title="Create a multi-zone layout" href="/players/layout-builder/" />
+	<LinkCard title="Invite a new user" href="/clients/users/#add-a-new-user" />
+	<LinkCard title="Change player settings" href="/reference/player-settings/" />
+</CardGrid>

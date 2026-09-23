@@ -1,0 +1,24 @@
+/* DigitalVI brand accent (Studio header orange) */
+:root {
+	--sl-color-accent-low: #3d1c06;
+	--sl-color-accent: #f28c28;
+	--sl-color-accent-high: #ffd9b3;
+}
+:root[data-theme='light'] {
+	--sl-color-accent-low: #ffe6cc;
+	--sl-color-accent: #c85f00;
+	--sl-color-accent-high: #5a2a00;
+}
+
+/* Screenshots: subtle frame so white app pages don't blend into the page */
+.sl-markdown-content img[src*='/screenshots/'] {
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 6px;
+	box-shadow: 0 2px 10px rgb(0 0 0 / 0.08);
+}
+
+/* Field reference tables read better a little tighter */
+.sl-markdown-content table td:first-child {
+	white-space: nowrap;
+	font-weight: 600;
+}

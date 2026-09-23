@@ -1,0 +1,283 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "astro",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "redirects": [
+    {
+      "source": "/app",
+      "destination": "/home/dashboard/",
+      "permanent": false
+    },
+    {
+      "source": "/app/dashboard/map",
+      "destination": "/home/dashboard/#map",
+      "permanent": false
+    },
+    {
+      "source": "/app/notifications/:path*",
+      "destination": "/home/messages/",
+      "permanent": false
+    },
+    {
+      "source": "/app/tutorialScenarios/:path*",
+      "destination": "/home/tutorials/",
+      "permanent": false
+    },
+    {
+      "source": "/app/users/edit/:path*",
+      "destination": "/clients/users/#add-a-new-user",
+      "permanent": false
+    },
+    {
+      "source": "/app/users/:id/resetPassword",
+      "destination": "/clients/users/#actions-menu",
+      "permanent": false
+    },
+    {
+      "source": "/app/users/:id/apikey/:path*",
+      "destination": "/clients/users/#api-keys",
+      "permanent": false
+    },
+    {
+      "source": "/app/users/:path*",
+      "destination": "/clients/users/",
+      "permanent": false
+    },
+    {
+      "source": "/app/permissions/:path*",
+      "destination": "/clients/user-permissions/",
+      "permanent": false
+    },
+    {
+      "source": "/app/roles/:path*",
+      "destination": "/clients/user-roles/",
+      "permanent": false
+    },
+    {
+      "source": "/app/locations/edit/:path*",
+      "destination": "/players/locations/#add-a-new-location",
+      "permanent": false
+    },
+    {
+      "source": "/app/locations/:id/playerSettings",
+      "destination": "/reference/player-settings/",
+      "permanent": false
+    },
+    {
+      "source": "/app/locations/:id/openingHours/:path*",
+      "destination": "/players/locations/#opening-hours",
+      "permanent": false
+    },
+    {
+      "source": "/app/locations/:id/dashboard/:path*",
+      "destination": "/players/locations/#edit-the-location-dashboard",
+      "permanent": false
+    },
+    {
+      "source": "/app/locations/:id/info",
+      "destination": "/players/locations/#location-details-page",
+      "permanent": false
+    },
+    {
+      "source": "/app/locations/:id",
+      "destination": "/players/locations/#location-dashboard",
+      "permanent": false
+    },
+    {
+      "source": "/app/locations",
+      "destination": "/players/locations/",
+      "permanent": false
+    },
+    {
+      "source": "/app/players/edit/:path*",
+      "destination": "/players/players/#add-a-new-player",
+      "permanent": false
+    },
+    {
+      "source": "/app/players/:id/playlistSchedules",
+      "destination": "/players/player-details/#playlist-schedules",
+      "permanent": false
+    },
+    {
+      "source": "/app/players/:id/layoutSchedules",
+      "destination": "/players/player-details/#layout-schedules",
+      "permanent": false
+    },
+    {
+      "source": "/app/players/:id/screenshot",
+      "destination": "/players/player-details/#screenshot",
+      "permanent": false
+    },
+    {
+      "source": "/app/players/:id/displays",
+      "destination": "/players/player-details/#player-displays",
+      "permanent": false
+    },
+    {
+      "source": "/app/players/:id/changeClient",
+      "destination": "/players/player-details/#change-client",
+      "permanent": false
+    },
+    {
+      "source": "/app/players/:id/settings",
+      "destination": "/reference/player-settings/",
+      "permanent": false
+    },
+    {
+      "source": "/app/players/:id/statusHistory",
+      "destination": "/players/player-details/#status-history",
+      "permanent": false
+    },
+    {
+      "source": "/app/players/:id/:path*",
+      "destination": "/players/player-details/",
+      "permanent": false
+    },
+    {
+      "source": "/app/players",
+      "destination": "/players/players/",
+      "permanent": false
+    },
+    {
+      "source": "/app/screenLayouts/edit/:path*",
+      "destination": "/players/layouts/#add-a-new-layout",
+      "permanent": false
+    },
+    {
+      "source": "/app/screenLayouts/:id/builder",
+      "destination": "/players/layout-builder/",
+      "permanent": false
+    },
+    {
+      "source": "/app/screenLayouts/:id/schedules/:path*",
+      "destination": "/players/layouts/#zone-schedules",
+      "permanent": false
+    },
+    {
+      "source": "/app/screenLayouts/:id",
+      "destination": "/players/layouts/#layout-details-page",
+      "permanent": false
+    },
+    {
+      "source": "/app/screenLayouts",
+      "destination": "/players/layouts/",
+      "permanent": false
+    },
+    {
+      "source": "/app/tags/bulk",
+      "destination": "/players/tags/#bulk-tags-for-players",
+      "permanent": false
+    },
+    {
+      "source": "/app/tags/:path*",
+      "destination": "/players/tags/",
+      "permanent": false
+    },
+    {
+      "source": "/app/appVersion/:path*",
+      "destination": "/players/app-versions/",
+      "permanent": false
+    },
+    {
+      "source": "/app/playStatistics/:path*",
+      "destination": "/players/display-statistics/",
+      "permanent": false
+    },
+    {
+      "source": "/app/licenses/:path*",
+      "destination": "/players/licenses/",
+      "permanent": false
+    },
+    {
+      "source": "/app/contentCreation/:path*",
+      "destination": "/content/content-creation/",
+      "permanent": false
+    },
+    {
+      "source": "/app/extraContent/:path*",
+      "destination": "/content/data-feeds/",
+      "permanent": false
+    },
+    {
+      "source": "/app/playerGroups/edit/:path*",
+      "destination": "/playlists/playlist-groups/#add-a-new-playlist-group",
+      "permanent": false
+    },
+    {
+      "source": "/app/playerGroups/:id/fallbackPlaylist",
+      "destination": "/playlists/playlist-groups/#fallback-playlist",
+      "permanent": false
+    },
+    {
+      "source": "/app/playerGroups/:id/fallbackLayout",
+      "destination": "/playlists/playlist-groups/#fallback-layout",
+      "permanent": false
+    },
+    {
+      "source": "/app/playerGroups/:id/bulkAssign",
+      "destination": "/playlists/playlist-groups/#bulk-assign-players",
+      "permanent": false
+    },
+    {
+      "source": "/app/playerGroups/:id/addNotScheduledPlaylist",
+      "destination": "/playlists/playlist-groups/#event-playlists",
+      "permanent": false
+    },
+    {
+      "source": "/app/playerGroups/:id",
+      "destination": "/playlists/playlist-groups/#playlist-group-details",
+      "permanent": false
+    },
+    {
+      "source": "/app/playerGroups",
+      "destination": "/playlists/playlist-groups/",
+      "permanent": false
+    },
+    {
+      "source": "/app/playlists/edit/:path*",
+      "destination": "/playlists/playlists/#add-a-new-playlist",
+      "permanent": false
+    },
+    {
+      "source": "/app/playlists/:path*",
+      "destination": "/playlists/playlists/",
+      "permanent": false
+    },
+    {
+      "source": "/app/files/:path*",
+      "destination": "/playlists/media-manager/",
+      "permanent": false
+    },
+    {
+      "source": "/app/synchronizations/:path*",
+      "destination": "/playlists/synchronizations/",
+      "permanent": false
+    },
+    {
+      "source": "/app/devices/:path*",
+      "destination": "/control/devices/",
+      "permanent": false
+    },
+    {
+      "source": "/app/hardwareDrivers/:path*",
+      "destination": "/control/hardware-drivers/",
+      "permanent": false
+    },
+    {
+      "source": "/app/support",
+      "destination": "/about/support/",
+      "permanent": false
+    },
+    {
+      "source": "/app/about",
+      "destination": "/about/about/",
+      "permanent": false
+    },
+    {
+      "source": "/app/:path*",
+      "destination": "/",
+      "permanent": false
+    }
+  ]
+}
